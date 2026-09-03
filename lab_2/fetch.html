@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 5</title>
+</head>
+<body>
+<p id="name"></p>
+
+<script>
+  async function getName () {
+
+  try {
+    const response = await fetch('http://localhost:5000/api/name')
+    const el = document.querySelector('#name');
+
+    const text = await response.text()
+    el.append(text)
+  } catch (e) {
+    console.error(e);
+  }
+  }
+
+  getName();
+</script>
+</body>
+</html>

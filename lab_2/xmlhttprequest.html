@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 4</title>
+</head>
+<body>
+<p id="name"></p>
+
+<script>
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", 'http://localhost:5000/api/name')
+  xhr.send();
+
+  const el = document.querySelector('#name');
+
+  xhr.onload = function()  {
+    el.append(xhr.response)
+  }
+</script>
+</body>
+</html>

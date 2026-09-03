@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery AJAX Request</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<p id="name"></p>
+
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      url: 'http://localhost:5000/api/name',
+      method: 'GET',
+      success: function(data) {
+        $('#name').text(data);
+      },
+    });
+  });
+</script>
+
+</body>
+</html>
