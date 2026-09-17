@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
           <p><b>Заголовки:</b></p>
           <pre>${JSON.stringify(req.headers, null, 2)}</pre>
           <p><b>Тело запроса:</b></p>
-          <pre>${body}</pre>
+          <pre>${body_str}</pre>
         </body>
       </html>
     `;
