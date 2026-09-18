@@ -23,8 +23,8 @@ export function fibonacciImmediate(n) {
     if (n === 1 || n === 2) return resolve(1);
 
     setImmediate(async () => {
-      const a = await fibonacciAsync(n - 1);
-      const b = await fibonacciAsync(n - 2);
+      const a = await fibonacciImmediate(n - 1);
+      const b = await fibonacciImmediate(n - 2);
       resolve(a + b);
     });
   });

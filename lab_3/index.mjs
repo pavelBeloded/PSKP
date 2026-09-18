@@ -100,18 +100,6 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  if (parsedUrl.pathname === "/factAsync" && method === "GET") {
-    const k = parseKParam(parsedUrl);
-
-    if (k === null) {
-      sendJson(res, { error: "Parameter 'k' is required and must be a number" });
-      return;
-    }
-
-    sendJson(res, { k, fact: await fibonacciAsync(k) });
-    return;
-  }
-
   if (parsedUrl.pathname === "/factImmediate" && method === "GET") {
     const k = parseKParam(parsedUrl);
 
