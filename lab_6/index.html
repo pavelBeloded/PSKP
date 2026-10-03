@@ -8,7 +8,7 @@
     <title>Lab 6</title>
 
     <style>
-        #mailForm {
+        form {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -43,6 +43,13 @@
         </button>
     </form>
 
+
+
+    <form id="directlyForm" action="/sendDirectly" method="post">
+        <p><label for="dirMessage">Text</label><textarea id="dirMessage" name="message" rows="6" cols="40" required></textarea></p>
+        <button type="submit" id="sendDirectlyBtn">Send Directly</button>
+
+    </form>
 
 
 </body>

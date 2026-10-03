@@ -1,7 +1,14 @@
 import http from 'http';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { parseUrl, readBody, send, sendError, serveFile } from 'http-lab-kit';
+import {
+  parseUrl,
+  readBody,
+  readJsonBody,
+  send,
+  sendError,
+  serveFile,
+} from 'http-lab-kit';
 import * as querystring from 'node:querystring';
 import { sendmail } from './mailer.js';
 
@@ -43,7 +50,7 @@ const server = http.createServer(async (req, res) => {
 
   if (url.pathname === '/sendDirectly' && req.method === 'POST') {
     try {
-      const { message } = await readBody(req, JSON.parse);
+      const { message } = (await readBody(req, querystring.parse)) ?? {};
       await send(message);
       serveFile(res, path.join(__dirname, 'sended.html'), HTML);
     } catch (e) {
