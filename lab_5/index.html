@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 5</title>
+</head>
+<body>
+    <div id="root">
+        <div style="display: flex; flex-direction: column; align-items: start; gap: 10px">
+
+        <form id="addForm">
+            <input type="text" name="name" placeholder="Name" required/>
+            <input type="date" name="birthday" placeholder="Birthday" required/>
+            <button type="submit">Add</button>
+        </form>
+
+        <form id="deleteForm">
+            <input type="number" name="id" placeholder="ID" required/>
+            <button type="submit">Remove</button>
+        </form>
+
+        <form id="putForm">
+            <input type="number" id="putId" name="id" placeholder="ID" required/>
+            <input type="text" name="name" placeholder="Name" required/>
+            <input type="date"  name="birthday" placeholder="Birthday" required/>
+            <button type="submit">Update</button>
+        </form>
+        </div>
+        <ul style="list-style: none" id="list"></ul>
+    </div>
+    <script src="./page.js" type="module"></script>
+</body>
+</html>

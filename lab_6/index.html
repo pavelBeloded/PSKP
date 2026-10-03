@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 6</title>
+
+    <style>
+        #mailForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="mailForm" action="/send" method="post">
+
+        <div>
+            <label for="from">From</label>
+            <input type="email" name="from" id="from">
+        </div>
+        <div>
+            <label for="to">To</label>
+            <input type="email" name="to" id="to">
+        </div>
+        <p><label for="message">Text</label><textarea id="message" name="message" rows="6" cols="40" required></textarea></p>
+        <button type="submit" id="sendButton">
+            Send
+        </button>
+    </form>
+
+
+
+</body>
+</html>
