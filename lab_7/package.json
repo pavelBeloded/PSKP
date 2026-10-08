@@ -1,0 +1,21 @@
+{
+  "name": "lab_7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "keywords": [],
+  "config": {
+    "staticDir": "static",
+    "port": 5000
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "http-lab-kit": "^1.0.5"
+  }
+}
