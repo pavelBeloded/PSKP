@@ -1,14 +1,7 @@
 import http from 'http';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import {
-  parseUrl,
-  readBody,
-  readJsonBody,
-  send,
-  sendError,
-  serveFile,
-} from 'http-lab-kit';
+import { parseUrl, readBody, send, sendError, serveFile } from 'http-lab-kit';
 import * as querystring from 'node:querystring';
 import { sendmail } from './mailer.js';
 
