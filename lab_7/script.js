@@ -3,7 +3,7 @@ import useStaticServer from './useStaticServer.js';
 import * as http from 'node:http';
 
 const PORT = pkg.config?.port || 5000;
-const staticDir = pkg.config?.staticDir || 'static';
+const staticDir = process.argv[2] || pkg.config?.staticDir || 'static';
 
 const staticHandler = useStaticServer(staticDir);
 const server = http.createServer(async (req, res) => {
@@ -12,4 +12,5 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log('Server running on http://localhost:' + PORT);
+  console.log('Current static dir: ' + staticDir);
 });
