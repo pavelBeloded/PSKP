@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>formparameter</title>
+</head>
+<body>
+<form action="/formparameter" method="POST">
+    <p><label>Text: <input type="text" name="text"></label></p>
+    <p><label>Number: <input type="number" name="number"></label></p>
+    <p><label>Date: <input type="date" name="date"></label></p>
+    <p>
+        <label><input type="checkbox" name="checkbox" value="first"> First</label>
+        <label><input type="checkbox" name="checkbox" value="second"> Second</label>
+    </p>
+    <p>
+        <label><input type="radio" name="radio" value="one" checked> One</label>
+        <label><input type="radio" name="radio" value="two"> Two</label>
+    </p>
+    <p><label>Textarea:<br><textarea name="textarea" rows="4" cols="40"></textarea></label></p>
+    <p>
+        <input type="submit" name="submit" value="Save">
+        <input type="submit" name="submit" value="Send">
+    </p>
+</form>
+</body>
+</html>
